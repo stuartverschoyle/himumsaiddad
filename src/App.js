@@ -86,6 +86,7 @@ function App() {
           <>
             <img
               style={{ width: 300 }}
+              alt="weather icon"
               src={`https://www.metaweather.com/static/img/weather/${weather.consolidated_weather[0].weather_state_abbr}.svg`}
             />
             <RangeSlider
