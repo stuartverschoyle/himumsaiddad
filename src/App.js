@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     if (woeid) {
       axios
-        .get(`https://www.metaweather.com/api/location/${woeid}`)
+        .get(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}`)
         .then(function (response) {
           setWeather(response.data);
 
@@ -41,7 +41,7 @@ function App() {
     if (position) {
       axios
         .get(
-          `https://www.metaweather.com/api/location/search/?lattlong=${position.coords.latitude},${position.coords.longitude}`
+          `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?lattlong=${position.coords.latitude},${position.coords.longitude}`
         )
         .then(function (response) {
           if (response.data.length > 0) {
